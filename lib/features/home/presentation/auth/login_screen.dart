@@ -127,20 +127,17 @@ class LoginScreen extends StatelessWidget {
                                       text: AppStrings.login,
                                       color: AppColors.btnColor,
                                       onPressedButton: () {
-                                        AuthCubit.get(context).login(
-                                            email: 'bulah94@example.net',
-                                            password: 'password');
 
-                                        // AuthCubit.get(context).login(
-                                        //   email: AuthCubit.get(context)
-                                        //       .emailController
-                                        //       .text
-                                        //       .trim(),
-                                        //   password: AuthCubit.get(context)
-                                        //       .passwordController
-                                        //       .text
-                                        //       .trim(),
-                                        // );
+                                        AuthCubit.get(context).login(
+                                          email: AuthCubit.get(context)
+                                              .emailController
+                                              .text
+                                              .trim(),
+                                          password: AuthCubit.get(context)
+                                              .passwordController
+                                              .text
+                                              .trim(),
+                                        );
                                         Navigator.pushNamed(context, Routes.home);
 
                                       },

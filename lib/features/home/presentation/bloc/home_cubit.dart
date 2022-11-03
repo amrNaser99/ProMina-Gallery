@@ -66,7 +66,6 @@ class HomeCubit extends Cubit<HomeStates> {
       photosList.add(x);
       debugPrint(value.path);
 
-      // uploadImage(context: context, image: x);
       emit(GetImageFromGallerySuccess());
     });
   }
@@ -77,7 +76,6 @@ class HomeCubit extends Cubit<HomeStates> {
       photosList.add(pickedImage);
       debugPrint(value.path);
 
-      // uploadImage(context: context, image: pickedImage!);
       emit(GetImageFromCameraSuccess());
     });
   }
